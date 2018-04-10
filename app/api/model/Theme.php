@@ -4,7 +4,7 @@ use app\api\model\Base;
 
 class Banner extends Base
 {
-
+    
 
 
 

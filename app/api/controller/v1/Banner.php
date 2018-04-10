@@ -14,7 +14,7 @@ class Banner
     public function getBanner(){
 
         $res = model('Banner')->select();
-        var_dump($res);
+        var_dump(collection($res)->toArray());
 
 
     }
