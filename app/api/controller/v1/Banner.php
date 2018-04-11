@@ -13,9 +13,9 @@ class Banner
 {
     public function getBanner(){
 1/0;
-        throw new CurrencyException('500');
-        $res = model('Banner')->select();
-        var_dump(collection($res)->toArray());
+//        throw new CurrencyException('500');
+//        $res = model('Banner')->select();
+//        var_dump(collection($res)->toArray());
 
 
     }

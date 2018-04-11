@@ -18,7 +18,7 @@ return [
     'default_action'         => 'index',
 
     // 应用调试模式
-    'app_debug'              => true,
+    'app_debug'              => false,
     // 应用Trace
     'app_trace'              => true,
 
@@ -27,6 +27,7 @@ return [
 
     'log'                    => [
         // 日志记录方式，内置 file socket 支持扩展
+        // 关闭自动记录日志，请将type设置为test
         'type'  => 'test',
 
     ],

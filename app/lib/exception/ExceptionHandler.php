@@ -1,6 +1,7 @@
 <?php
 namespace app\lib\exception;
 use think\Exception;
+use think\Log;
 
 /**
  * Class BaseException
@@ -39,7 +40,7 @@ class ExceptionHandler extends Handle
                 'type'  =>  'File',
                 'path'  =>  LOG_PATH,
             ]);
-            Log::record($e->getMessage());
+            Log::write('6666');
 
 //            $this->recordErrorLog($e);
         }
