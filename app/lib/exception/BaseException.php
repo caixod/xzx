@@ -1,23 +1,18 @@
 <?php
-namespace app\lib\exception;
-use think\Exception;
-
 /**
- * Class BaseException
- * 自定义异常类的基类
+ * Created by PhpStorm.
+ * User: RS
+ * Date: 2018/4/11
+ * Time: 10:20
  */
-use think\exception\Handle;
-class BaseException extends Handle
+
+namespace app\lib\exception;
+use app\lib\exception\ExceptionHandler;
+
+class BaseException extends ExceptionHandler
 {
-    public $code = 400;
-    public $msg = 'invalid parameters';
-    public $errorCode = 999;
 
-    public $shouldToClient = true;
 
-    public function render(Exception $e)
-    {
 
-    }
+
 }
-

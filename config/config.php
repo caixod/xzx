@@ -16,10 +16,13 @@ return [
     'default_controller'     => 'Index',
     // 默认操作名
     'default_action'         => 'index',
-    
+
     // 应用调试模式
     'app_debug'              => true,
     // 应用Trace
     'app_trace'              => true,
+
+    // 异常处理handle类 留空使用 \think\exception\Handle
+    'exception_handle'       => '\app\lib\exception\ExceptionHandler',
 
 ];
