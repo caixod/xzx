@@ -42,23 +42,21 @@ class ExceptionHandler extends Handle
             /**
              * 上线状态记录日志，方便查找问题
              */
-            Log::init([
-                'type'  =>  'File',
-                'path'  =>  LOG_PATH,
-            ]);
-            Log::write($e->getMessage());
-
-//            $this->recordErrorLog($e);
+            $this->recordErrorLog($e);//记录日志
         }
 
         return json($data);
 
 
-
-
-
     }
 
+        function recordErrorLog($e){
+            Log::init([
+                'type'  =>  'File',
+                'path'  =>  LOG_PATH,
+            ]);
+            Log::write($e->getMessage());
+        }
 
 }
 
