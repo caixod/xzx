@@ -17,6 +17,9 @@ define('APP_PATH', __DIR__ . '/../app/');
 //总配置目录
 define('CONF_PATH', __DIR__.'/../config/');
 
+//日志目录
+define('LOG_PATH',__DIR__.'/../log/');
+
 // 加载框架引导文件
 require __DIR__ . '/../thinkphp/start.php';
 

@@ -7,24 +7,15 @@
  */
 
 namespace app\api\controller\v1;
-use Think\Exception;
+use app\lib\exception\CurrencyException;
 
 class Banner
 {
     public function getBanner(){
-
-        try{
-                1 / 0;
-        }catch (Exception $ex){
-
-            throw $ex;
-
-        }
-
-
-//
-//        $res = model('Banner')->select();
-//        var_dump(collection($res)->toArray());
+1/0;
+        throw new CurrencyException('500');
+        $res = model('Banner')->select();
+        var_dump(collection($res)->toArray());
 
 
     }

@@ -25,4 +25,12 @@ return [
     // 异常处理handle类 留空使用 \think\exception\Handle
     'exception_handle'       => '\app\lib\exception\ExceptionHandler',
 
+    'log'                    => [
+        // 日志记录方式，内置 file socket 支持扩展
+        'type'  => 'test',
+
+    ],
+
+
+
 ];
