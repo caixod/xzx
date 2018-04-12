@@ -31,6 +31,7 @@ class Validate extends Validate
         $request = request();
         $res = $this->scene($scene)->check($request);
         if (!$res){
+            //改写为抛出异常
             echo $this->getError();
         }
     }

@@ -1,14 +1,14 @@
 <?php
 namespace app\lib\exception;
-use think\Exception;
+use Exception;
 use think\Log;
-
+use think\exception\Handle;
+use app\lib\exception\CurrencyException;
 /**
  * Class BaseException
  * 自定义异常类的基类
  */
-use think\exception\Handle;
-use app\lib\exception\CurrencyException;
+
 
 class ExceptionHandler extends Handle
 {
@@ -27,7 +27,6 @@ class ExceptionHandler extends Handle
             //下面不是自定义异常，是服务器异常不是我们想要的，需要记录日志
             // 如果是服务器未处理的异常，将http状态码设置为500，并记录日志
             if(config('app_debug')){
-
                 // 调试状态下需要显示TP默认的异常页面，因为TP的默认页面
                 // 很容易看出问题
                 return parent::render($e);//调回原来的render方法

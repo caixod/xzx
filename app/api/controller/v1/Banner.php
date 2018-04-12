@@ -11,11 +11,17 @@ use app\lib\exception\CurrencyException;
 
 class Banner
 {
-    public function getBanner(){
-1/0;
-//        throw new CurrencyException('500');
-//        $res = model('Banner')->select();
-//        var_dump(collection($res)->toArray());
+    public function getBanner($id){
+
+        $BannerData = model('Banner')->getBannerById($id);
+        if (!$BannerData){
+            throw new CurrencyException('0','请求Banner不存在');
+        }
+
+//        $ceshi = $BannerData->toArray();
+//        var_dump($ceshi);
+
+        return $BannerData;
 
 
     }
