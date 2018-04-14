@@ -12,4 +12,4 @@
 use think\Route;
 
 //Sample
-Route::get('api/:version/getbanner/:id', 'api/:version/getbanner/');
+Route::get('api/:version/getbanner/:id', 'api/:version.banner/getbanner/');

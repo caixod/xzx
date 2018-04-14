@@ -7,7 +7,7 @@ class Image extends Base
     protected $hidden = ['id','from','update_time','delete_time'];
     public function getUrlAttr($value)
     {
-        $status = [$value=>'www.tp5.com/images'.$value];
+        $status = [$value=>'http://www.tp5.com/images'.$value];
         return $status[$value];
     }
 
